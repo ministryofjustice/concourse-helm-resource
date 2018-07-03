@@ -86,6 +86,8 @@ setup_repos() {
     echo Installing helm repository $name $url
     helm repo add --tiller-namespace $tiller_namespace $name $url
   done
+
+  helm repo update
 }
 
 setup_resource() {
